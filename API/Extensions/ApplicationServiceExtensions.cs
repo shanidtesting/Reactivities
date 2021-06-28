@@ -28,7 +28,7 @@ namespace API.Extensions
                     policy.AllowAnyMethod().AllowAnyHeader().WithOrigins("http://localhost:3000");
                 });
             });
-            services.AddMediatR(typeof(List.Handler).Assembly);
+            services.AddMediatR(typeof(ActivityHandler.ListHandler).Assembly);
             services.AddAutoMapper(typeof(MappingProfiles).Assembly);
 
             return services;
